@@ -1,9 +1,0 @@
-# depslib dependency file v1.0
-1714999498 source:d:\cs\. projects\c\multimap dictionary\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	"multimap dictionary.h"
-
-1714999429 d:\cs\. projects\c\multimap dictionary\multimap dictionary.h
-
