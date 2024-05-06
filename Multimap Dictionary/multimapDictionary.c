@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "multimap dictionary.h"
+#include "multimapDictionary.h"
+
 
 Node *createNode(char *key, int value) {
     Node *newNode = (Node *)malloc(sizeof(Node));
@@ -26,15 +27,16 @@ void addPair(Node **head, char *key, int value) {
         exit(1);  // A special case, checks if the allocation of memory for string within the node was successful.
     newNode->value = value;
     newNode->next = NULL;
-    //
+    // A special case. Checks if the linked list is empty,
+    // or if newNode's key < key of the first node in the list
     if (*head == NULL || strcmp(key, (*head)->key) < 0) {
         newNode->next = *head;
         *head = newNode;
-    } else {
+    }
+    else {
         Node *current = *head;
-        while ((current->next != NULL) && (strcmp(key, current->next->key) > 0)) {
+        while ((current->next) && (strcmp(key, current->next->key) > 0))
             current = current->next;
-        }
         newNode->next = current->next;
         current->next = newNode;
     }
@@ -46,7 +48,7 @@ void removePair(Node **head, char *key) {
     Node *current = *head;
     Node *prev = NULL;
 
-    while (current != NULL && strcmp(current->key, key) != 0) {
+    while ((current) && (strcmp(current->key, key) != 0)) {
         prev = current;
         current = current->next;
     }
@@ -70,12 +72,11 @@ void removePair(Node **head, char *key) {
 // Function to modify the value of an existing pair
 void modifyValue(Node *head, char *key, int newValue) {
     Node *current = head;
-    while (current != NULL && strcmp(current->key, key) != 0) {
+    while ((current) && (strcmp(current->key, key) != 0))
         current = current->next;
-    }
-    if (current == NULL) {
+    if (!current)
         printf("Key not found.\n");
-    } else {
+    else {
         current->value = newValue;
     }
 }

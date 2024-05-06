@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "multimap dictionary.h"
+#include "multimapDictionary.h"
 
 int main() {
     Node *head = NULL;

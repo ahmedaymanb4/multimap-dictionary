@@ -1,11 +1,11 @@
-#ifndef MULTIMAP_DICTIONARY_H_INCLUDED
-#define MULTIMAP_DICTIONARY_H_INCLUDED
+#ifndef MULTIMAPDICTIONARY_H_INCLUDED
+#define MULTIMAPDICTIONARY_H_INCLUDED
 
-typedef struct node {  // Node structure
+typedef struct mapNode{  // Node structure
     char *key;
     int value;
-    struct Node *next;
-} Node;
+    struct mapNode *next;
+}Node;
 
 //  Functions Prototypes:
 Node *createNode(char *key, int value);
@@ -15,4 +15,4 @@ void modifyValue(Node *head, char *key, int newValue);  // Function to modify th
 void printValuesForKey(Node *head, char *key);  // Function to print values associated with a particular key
 void freeList(Node *head);  // Function to free memory allocated for the linked list
 
-#endif // MULTIMAP_DICTIONARY_H_INCLUDED
+#endif // MULTIMAPDICTIONARY_H_INCLUDED

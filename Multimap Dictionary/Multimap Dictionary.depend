@@ -7,3 +7,19 @@
 
 1714999429 d:\cs\. projects\c\multimap dictionary\multimap dictionary.h
 
+1715006721 source:d:\cs\. projects\c\my data structures\multimap dictionary\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"multimapDictionary.h"
+
+1715005795 d:\cs\. projects\c\my data structures\multimap dictionary\multimap dictionary.h
+
+1715007802 d:\cs\. projects\c\my data structures\multimap dictionary\multimapdictionary.h
+
+1715007177 source:d:\cs\. projects\c\my data structures\multimap dictionary\multimapdictionary.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"multimapDictionary.h"
+
