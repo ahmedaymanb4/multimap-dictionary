@@ -1,0 +1,33 @@
+---- Menu ----
+1. Insert a node with sublist
+2. Insert value into sublist
+3. Remove a node by key
+4. Modify value by key
+5. Print values for a given key
+6. Exit
+Enter your choice: 1
+Enter key for the node: 1
+Node with key 1 and sublist created.
+
+---- Menu ----
+1. Insert a node with sublist
+2. Insert value into sublist
+3. Remove a node by key
+4. Modify value by key
+5. Print values for a given key
+6. Exit
+Enter your choice: 2
+Enter key for the node: 1
+Enter key to insert into the sublist: 1
+Enter value to insert into the sublist: Cristiano
+
+---- Menu ----
+1. Insert a node with sublist
+2. Insert value into sublist
+3. Remove a node by key
+4. Modify value by key
+5. Print values for a given key
+6. Exit
+Enter your choice: 5
+Enter key to print values: 1
+1: Cristiano
