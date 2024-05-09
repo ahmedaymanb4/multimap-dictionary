@@ -2,19 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "list.h"
-/*Test case to modify
-1
-1
-2
-1
-1
-cr
-5
-1
-4
-1
-ahmed
-*/
+
+
 void printMenu() {
     printf("\n---- Menu ----\n");
     printf("1. Insert a node with sublist\n");
