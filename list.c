@@ -15,7 +15,7 @@ int ListEmpty(List *ps) {
 
 void createNode(Node**node) {
     *node = (Node *)malloc(sizeof(Node));
-    if (*node != NULL) {
+    if (*node) {
         (*node)->next = NULL;
         (*node)->list = NULL; // Initialize sublist to NULL
     }
@@ -37,11 +37,11 @@ int insertNode(List *ps, int key, char value[]) {
     } else {
         Node *current = ps->head;
         Node *prev = NULL;
-        while (current != NULL && current->key < key) {
+        while (current && current->key < key) {
             prev = current;
             current = current->next;
         }
-        if (current != NULL && current->key == key) {
+        if (current && current->key == key) {
             free(newNode);
             return 0; // Key already exists
         }
@@ -58,7 +58,7 @@ int removeKey(List *ps, int key) {
     Node *current = ps->head;
     Node *prev = NULL;
     int removed = 0;
-    while (current != NULL) {
+    while (current) {
         if (current->key == key) {
             removed = 1;
             if (prev == NULL) {
@@ -82,7 +82,7 @@ int removeKey(List *ps, int key) {
 
 int modifyValue(List *ps, int key, char newValue[]) {
     Node *current = ps->head;
-    while (current != NULL) {
+    while (current) {
         if (current->key == key) {
             strcpy(current->value, newValue);
             return 1; // Modification successful
